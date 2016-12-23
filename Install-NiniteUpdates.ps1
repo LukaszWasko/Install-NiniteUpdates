@@ -188,7 +188,7 @@ if($CachePaths)
 Out-Log " UpdateOnly      : $(if($UpdateOnly){'true'}else{'false'})" -OutToFile
 Out-Log " RootDir         : $RootDir" -OutToFile
 
-if(!(test-path $RootDir))
+if(!(test-path $RootDir\Log))
 {
     Out-Log "Building local folder structure.." -OutToFile
     New-Item $RootDir\App -ItemType directory 2> $null | Out-Null #2> $null It provides no message for error
